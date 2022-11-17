@@ -13,7 +13,7 @@
   }
 
 	let props: FileBlockProps | null = null;
-
+  
   const onMessage = (event: MessageEvent) => {
     const { data } = event;
     if (data.type === "setProps") {

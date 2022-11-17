@@ -4,7 +4,7 @@
 
 <template>
   <Block let:props={props}>
-    {#if props}
+    {#if props && props.context}
       <div>
         <h1>{props.context.owner}/{props.context.repo}</h1>
         <p>{props.context.file}</p>
