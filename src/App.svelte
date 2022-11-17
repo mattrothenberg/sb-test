@@ -10,9 +10,10 @@
   };
 
   let props;
+  console.log('SVELTE', props)
   
   const handleMessage = (event: MessageEvent) => {
-    console.log(event)
+    console.log('SVELTE', event)
     const { data } = event;
     // if (origin != "*" && event.origin !== origin) return;
     if (data.type === "setProps") {

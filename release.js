@@ -13,6 +13,7 @@ const distDir = path.resolve(__dirname, "./dist");
 const distBlocks = fs.readdirSync(distDir);
 
 distBlocks.forEach((distBlock) => {
+  console.log(distBlock);
   const tarBall = `svelte-block.tar.gz`;
   const tarBallPath = path.resolve(__dirname, "./dist", tarBall);
   const tarBallCmd = `tar -czf ${tarBallPath} -C ${distDir} ${distBlock}`;
