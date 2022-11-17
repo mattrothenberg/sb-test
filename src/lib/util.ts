@@ -1,4 +1,10 @@
-export const postMessage = (type: string, payload: any, otherArgs = {}) => {
+type BlocksMessage = "loaded";
+
+export const postMessage = (
+  type: BlocksMessage,
+  payload: any,
+  otherArgs = {}
+) => {
   window.top?.postMessage(
     {
       type,
