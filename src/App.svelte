@@ -17,8 +17,13 @@
     const { data } = event;
     // if (origin != "*" && event.origin !== origin) return;
     if (data.type === "setProps") {
-      props = data.props.props;
+      props = {
+        ...props,
+        ...data.props.props
+      };
     }
+
+    
   }
 
   onMount(() => {
